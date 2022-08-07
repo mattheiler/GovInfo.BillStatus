@@ -31,8 +31,7 @@ namespace GovInfo.BillStatus.Services
         public async Task<FileInfo> GetBillsFile(int number, string type, IProgress<double> progress)
         {
             var directory = Directory.CreateDirectory(WorkingDirectory ?? Path.GetTempPath());
-            var file = new FileInfo(Path.Combine(directory.FullName,
-                $"bills-{number}-{type}-{DateTime.Now:yy-MM-dd}.zip".Replace(':', '-')));
+            var file = new FileInfo(Path.Combine(directory.FullName, $"bills-{number}-{type}-{DateTime.Now:yy-MM-dd}.zip".Replace(':', '-')));
 
             if (File.Exists(file.FullName))
                 return file;

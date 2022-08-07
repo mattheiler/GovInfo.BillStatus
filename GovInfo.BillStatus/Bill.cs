@@ -97,6 +97,6 @@ namespace GovInfo.BillStatus
 
         [XmlArray("textVersions")]
         [XmlArrayItem("item")]
-        public List<TestVersion> TestVersions { get; set; }
+        public List<TextVersion> TestVersions { get; set; }
     }
 }

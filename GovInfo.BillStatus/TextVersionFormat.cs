@@ -2,7 +2,7 @@
 
 namespace GovInfo.BillStatus
 {
-    public class TestVersionFormat
+    public class TextVersionFormat
     {
         [XmlElement("url")]
         public string Url { get; set; }

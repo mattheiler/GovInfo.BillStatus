@@ -23,8 +23,9 @@ namespace GovInfo.BillStatus
         [XmlElement("text")]
         public string Text { get; set; }
 
-        [XmlElement("committee")]
-        public Committee Committee { get; set; }
+        [XmlArray("committees")]
+        [XmlArrayItem("item")]
+        public List<Committee> Committees { get; set; }
 
         [XmlArray("links")]
         [XmlArrayItem("link")]
